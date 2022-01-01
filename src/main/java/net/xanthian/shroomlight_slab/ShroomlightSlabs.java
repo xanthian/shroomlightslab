@@ -21,7 +21,7 @@ public class ShroomlightSlabs implements ModInitializer {
 
     public static final Block SHROOMLIGHT_SLAB = SlabBlock(FabricBlockSettings.strength(HARDNESS, RESISTANCE));
 	
-    public static final Item SHROOMLIGHT_SLAB_ITEM = Registry.register(Registry.ITEM, namespace, new BlockItem(SHROOMLIGHT_SLAB, new Item.Settings().group(ItemGroup.MISC));
+    public static final Item SHROOMLIGHT_SLAB_ITEM = Registry.register(Registry.ITEM, namespace, new BlockItem(SHROOMLIGHT_SLAB, new Item.Settings().group(ItemGroup.MISC)));
 
     @Override
 	public void onInitialize() {}
