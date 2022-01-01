@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "shroomlight_slab",
+  "version": "1",
+  "name": "shroomlight_slab",
+  "description": "A Shroomlight Slab.. duh!",
+  "authors": ["Xanthian"],
+  "entrypoints": {"main": ["net.xanthian.shroomlight_slab.shroomlight_slab"]},
+  "icon": "assets/shroomlight_slab/icon.png"
+}
