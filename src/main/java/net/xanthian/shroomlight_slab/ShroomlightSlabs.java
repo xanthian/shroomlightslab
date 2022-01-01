@@ -1,3 +1,5 @@
+package net.xanthian.shroomlight_slab;
+
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
