@@ -15,7 +15,7 @@ import net.minecraft.util.registry.Registry;
 public class ShroomlightSlabs implements ModInitializer {
     public static final Identifier namespace = new Identifier("shroomlight_slab", "shroomlight_slab");
 
-    public static final Block SHROOMLIGHT_SLAB = Registry.register(Registry.BLOCK, namespace, new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(1.0f, 1.0f).luminance(15));
+    public static final Block SHROOMLIGHT_SLAB = Registry.register(Registry.BLOCK, namespace, new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(1.0f, 1.0f).luminance(15)));
     public static final Item SHROOMLIGHT_SLAB_ITEM = Registry.register(Registry.ITEM, namespace, new BlockItem(SHROOMLIGHT_SLAB, new Item.Settings().group(ItemGroup.MISC)));
 
     @Override
