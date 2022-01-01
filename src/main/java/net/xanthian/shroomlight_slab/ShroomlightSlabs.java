@@ -14,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 public class ShroomlightSlabs implements ModInitializer {
 	private static final String MOD_ID = "shroomlight_slab";
 	private static final float HARDNESS = 1.0f;
-	private static final float RESISTANCE = 1.0f
+	private static final float RESISTANCE = 1.0f;
 	
 	
     public static final Identifier namespace = new Identifier("shroomlight_slab", "shroomlight_slab");
