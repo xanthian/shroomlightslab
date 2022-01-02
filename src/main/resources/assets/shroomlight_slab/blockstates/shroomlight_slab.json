@@ -1,1 +1,16 @@
-{"variants":{"type=bottom":{"model":"shroomlight_slab:block/shroomlight_slab"},"type=double":{"model":"minecraft:block/shroomlight"},"type=top":{"model":"shroomlight_slab:block/shroomlight_slab_top"}}}
+{
+  "variants":
+  {
+    "type=bottom":
+    {
+      "model":"shroomlight_slab:block/shroomlight_slab"
+    },
+    "type=double":
+    {
+      "model":"minecraft:block/shroomlight"
+    },
+    "type=top":{
+      "model":"shroomlight_slab:block/shroomlight_slab_top"
+    }
+  }
+}

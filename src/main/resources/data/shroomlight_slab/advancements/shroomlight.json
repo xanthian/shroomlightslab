@@ -1,18 +1,21 @@
 {
-	"parent":"minecraft:recipes/root",
-	"rewards":{
-		"recipes":["shroomlight_slab:shroomlight_slab","shroomlight_slab:shroomlight_slab_stonecutter"]
-		},
-		"criteria":{
-			"has_shroomlight":{
-			"trigger":"minecraft:inventory_changed",
-			"conditions":{
-				"items":[
-				{
-				"item":"minecraft:shroomlight"
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"shroomlight_slab:shroomlight_slab"
+
+		]
+	},
+	"criteria": {
+		"has_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:shroomlight"
+					}
 				]
-			
 			}
-			}
-			}
-			}
+		}
+	}
+}
