@@ -5,6 +5,6 @@
   "name": "shroomlight_slab",
   "description": "A Shroomlight Slab.. duh!",
   "authors": ["Xanthian"],
-  "entrypoints": {"main": ["net.xanthian.shroomlight_slab.shroomlight_slab"]},
+  "entrypoints": {"main": ["net.xanthian.shroomlight_slab.ShroomlightSlabs"]},
   "icon": "assets/shroomlight_slab/icon.png"
 }
