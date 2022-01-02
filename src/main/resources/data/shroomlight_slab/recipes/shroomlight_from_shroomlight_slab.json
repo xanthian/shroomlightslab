@@ -1,13 +1,16 @@
 {
-  "type":"minecraft:crafting_shapeless",
-  "ingredients":
-  [
-    {
-      "item":"shroomlight_slab:shroomlight_slab", "count":2
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_",
+        "_"
+    ],
+    "key": {
+        "_": {
+            "item": "shroomlight_slab:shroomlight_slab"
+        }
+    },
+    "result": {
+        "item": "minecraft:shroomlight",
+        "count": 1
     }
-  ],
-  "result":
-  {
-    "item":"minecraft:shroomlight","count":1
-  }
 }
