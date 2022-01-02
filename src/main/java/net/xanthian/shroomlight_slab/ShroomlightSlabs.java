@@ -16,7 +16,7 @@ import static net.minecraft.block.Blocks.*;
 public class ShroomlightSlabs implements ModInitializer {
     public static final Identifier namespace = new Identifier("shroomlight_slab", "shroomlight_slab");
 
-    public static final Block SHROOMLIGHT_SLAB = Registry.register(Registry.BLOCK, namespace, new SlabBlock(AbstractBlock.Settings.copy(SHROOMLIGHT)));
+    public static final Block SHROOMLIGHT_SLAB = Registry.register(Registry.BLOCK, namespace, new SlabBlock(AbstractBlock.Settings.copy(SHROOMLIGHT).strength(0.5f, 0.5f)));
     public static final Item SHROOMLIGHT_SLAB_ITEM = Registry.register(Registry.ITEM, namespace, new BlockItem(SHROOMLIGHT_SLAB, new Item.Settings().group(ItemGroup.DECORATIONS)));
 
     @Override
