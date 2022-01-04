@@ -7,15 +7,15 @@
 		]
 	},
 	"criteria": {
-		"has_glowstone": {
+		"has_glowstone_dust": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
-						"items":[
-							"minecraft:glowstone"
-						]
-					}
+					"items":[
+						"minecraft:glowstone_dust"
+					]
+				}
 				]
 			}
 		},
@@ -28,7 +28,7 @@
 	},
 	"requirements": [
 		[
-			"has_glowstone",
+			"has_glowstone_dust",
 			"has_the_recipe"
 		]
 	]

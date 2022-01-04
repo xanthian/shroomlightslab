@@ -7,15 +7,29 @@
 		]
 	},
 	"criteria": {
-		"has_block": {
+		"has_shroomlight": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
-						"item": "minecraft:shroomlight"
-					}
+					"items":[
+						"minecraft:shroomlight"
+					]
+				}
 				]
 			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "shroomlight_slab:shroomlight_slab"
+			}
 		}
-	}
+	},
+	"requirements": [
+		[
+			"has_shroomlight",
+			"has_the_recipe"
+		]
+	]
 }
