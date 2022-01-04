@@ -18,6 +18,9 @@ public class Slabs {
     public static final Block GLOWSTONE_SLAB = registerBlock("glowstone_slab",
             new SlabBlock(FabricBlockSettings.copy(Blocks.GLOWSTONE).nonOpaque()));
 
+    public static final Block SEA_LANTERN_SLAB = registerBlock("sea_lantern_slab",
+            new SlabBlock(FabricBlockSettings.copy(Blocks.SEA_LANTERN).nonOpaque()));
+
 
 //Register Blocks
     private static Block registerBlock(String name, Block block){

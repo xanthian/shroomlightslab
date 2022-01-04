@@ -2,6 +2,7 @@
   "replace":false,
   "values": [
     "shroomlight_slab:shroomlight_slab",
-    "shroomlight_slab:glowstone_slab"
+    "shroomlight_slab:glowstone_slab",
+    "shroomlight_slab:sea_lantern_slab"
   ]
 }

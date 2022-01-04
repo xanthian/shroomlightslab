@@ -1,0 +1,9 @@
+{
+  "parent":"minecraft:block/slab",
+  "textures":
+  {
+    "bottom":"minecraft:block/sea_lantern",
+    "top":"minecraft:block/sea_lantern",
+    "side":"shroomlight_slab:block/sea_lantern_slab_side"
+  }
+}
