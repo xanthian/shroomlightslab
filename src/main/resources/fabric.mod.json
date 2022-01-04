@@ -3,7 +3,7 @@
   "id": "shroomlight_slab",
   "version": "1",
   "name": "shroomlight_slab",
-  "description": "A Shroomlight Slab.. duh!",
+  "description": "A Shroomlight Slab.. duh! (and Glowstone now)",
   "authors": ["Xanthian"],
   "entrypoints": {"main": ["net.xanthian.shroomlight_slab.ShroomlightSlabs"]},
   "icon": "assets/shroomlight_slab/icon.png"

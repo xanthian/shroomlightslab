@@ -1,1 +1,4 @@
-{"block.shroomlight_slab.shroomlight_slab": "Shroomlight Slab"}
+{
+  "block.shroomlight_slab.shroomlight_slab":"Shroomlight Slab",
+  "block.shroomlight_slab.glowstonw_slab":"Glowstone Slab",
+}
