@@ -1,10 +1,17 @@
 {
   "schemaVersion": 1,
   "id": "shroomlight_slab",
-  "version": "1",
+  "version": "${version}",
   "name": "shroomlight_slab",
   "description": "A Shroomlight Slab.. duh! (and Glowstone now)",
   "authors": ["Xanthian"],
   "entrypoints": {"main": ["net.xanthian.shroomlight_slab.ShroomlightSlabs"]},
-  "icon": "assets/shroomlight_slab/icon.png"
+  "icon": "assets/shroomlight_slab/icon.png",
+  "license": "CC0-1.0",
+  "depends": {
+    "fabricloader": ">=0.12.10",
+    "fabric": ">=0.45.0",
+    "minecraft": "1.18.x",
+    "java": ">=16"
+  }
 }

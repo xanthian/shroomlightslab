@@ -9,7 +9,8 @@
     {
       "model":"minecraft:block/sea_lantern"
     },
-    "type=top":{
+    "type=top":
+    {
       "model":"shroomlight_slab:block/sea_lantern_slab_top"
     }
   }

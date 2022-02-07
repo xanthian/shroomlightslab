@@ -1,7 +1,7 @@
 package net.xanthian.shroomlight_slab;
 
 import net.fabricmc.api.ModInitializer;
-import net.xanthian.shroomlight_slab.block.Slabs;
+import net.xanthian.shroomlight_slab.block.Blocks;
 
 public class ShroomlightSlabs implements ModInitializer {
 
@@ -9,7 +9,6 @@ public class ShroomlightSlabs implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        Slabs.registerModBlocks();
-        System.out.println("Shroomlight Slabs loaded");
-}
+        Blocks.registerModBlocks();
+    }
 }
