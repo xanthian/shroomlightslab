@@ -9,9 +9,9 @@
   "icon": "assets/shroomlight_slab/icon.png",
   "license": "CC0-1.0",
   "depends": {
-    "fabricloader": ">=0.12.10",
-    "fabric": ">=0.45.0",
-    "minecraft": "1.18.x",
-    "java": ">=16"
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
   }
 }

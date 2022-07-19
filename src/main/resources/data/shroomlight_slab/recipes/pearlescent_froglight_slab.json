@@ -1,0 +1,15 @@
+{
+  "type":"minecraft:crafting_shaped",
+  "pattern":["XXX"],
+  "key":
+  {
+    "X":
+    {
+      "item":"minecraft:pearlescent_froglight"
+    }
+  },
+  "result":
+  {
+    "item":"shroomlight_slab:pearlescent_froglight_slab","count":6
+  }
+}

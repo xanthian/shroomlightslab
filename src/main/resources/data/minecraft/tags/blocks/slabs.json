@@ -3,6 +3,9 @@
   "values": [
     "shroomlight_slab:shroomlight_slab",
     "shroomlight_slab:glowstone_slab",
-    "shroomlight_slab:sea_lantern_slab"
+    "shroomlight_slab:sea_lantern_slab",
+    "shroomlight_slab:ochre_froglight_slab",
+    "shroomlight_slab:pearlescent_froglight_slab",
+    "shroomlight_slab:verdant_froglight_slab"
   ]
 }

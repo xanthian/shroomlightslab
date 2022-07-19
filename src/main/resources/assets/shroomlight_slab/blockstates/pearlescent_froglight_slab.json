@@ -1,0 +1,16 @@
+{
+  "variants":
+  {
+    "type=bottom":
+    {
+      "model":"shroomlight_slab:block/pearlescent_froglight_slab"
+    },
+    "type=double":
+    {
+      "model":"minecraft:block/pearlescent_froglight"
+    },
+    "type=top":{
+      "model":"shroomlight_slab:block/pearlescent_froglight_slab_top"
+    }
+  }
+}

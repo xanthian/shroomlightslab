@@ -1,0 +1,35 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"shroomlight_slab:verdant_froglight_slab"
+
+		]
+	},
+	"criteria": {
+		"has_verdant_froglight": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items":[
+							"minecraft:verdant_froglight"
+						]
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "shroomlight_slab:verdant_froglight_slab"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_verdant_froglight",
+			"has_the_recipe"
+		]
+	]
+}

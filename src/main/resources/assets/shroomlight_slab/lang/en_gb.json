@@ -1,5 +1,8 @@
 {
   "block.shroomlight_slab.shroomlight_slab":"Shroomlight Slab",
   "block.shroomlight_slab.glowstone_slab":"Glowstone Slab",
-  "block.shroomlight_slab.sea_lantern_slab":"Sea Lantern Slab"
+  "block.shroomlight_slab.sea_lantern_slab":"Sea Lantern Slab",
+  "block.shroomlight_slab.ochre_froglight_slab":"Ochre Froglight Slab",
+  "block.shroomlight_slab.pearlescent_froglight_slab":"Pearlescent Froglight Slab",
+  "block.shroomlight_slab.verdant_slab":"Verdant Froglight Slab"
 }

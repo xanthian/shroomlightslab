@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_",
+        "_"
+    ],
+    "key": {
+        "_": {
+            "item": "shroomlight_slab:verdant_froglight_slab"
+        }
+    },
+    "result": {
+        "item": "minecraft:verdant_froglight",
+        "count": 1
+    }
+}

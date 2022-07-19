@@ -18,6 +18,12 @@ public class Blocks {
             new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.GLOWSTONE).nonOpaque()));
     public static final Block SEA_LANTERN_SLAB = registerBlock("sea_lantern_slab",
             new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.SEA_LANTERN).nonOpaque()));
+    public static final Block OCHRE_FROGLIGHT_SLAB = registerBlock("ochre_froglight_slab",
+            new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.OCHRE_FROGLIGHT).nonOpaque()));
+    public static final Block PEARLESCENT_FROGLIGHT_SLAB = registerBlock("pearlescent_froglight_slab",
+            new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.PEARLESCENT_FROGLIGHT).nonOpaque()));
+    public static final Block VERDANT_FROGLIGHT_SLAB = registerBlock("verdant_froglight_slab",
+            new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.VERDANT_FROGLIGHT).nonOpaque()));
 
 //Register Blocks
     private static Block registerBlock(String name, Block block){
