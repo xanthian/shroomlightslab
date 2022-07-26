@@ -4,5 +4,7 @@
   "block.shroomlight_slab.sea_lantern_slab":"Sea Lantern Slab",
   "block.shroomlight_slab.ochre_froglight_slab":"Ochre Froglight Slab",
   "block.shroomlight_slab.pearlescent_froglight_slab":"Pearlescent Froglight Slab",
-  "block.shroomlight_slab.verdant_froglight_slab":"Verdant Froglight Slab"
+  "block.shroomlight_slab.verdant_froglight_slab":"Verdant Froglight Slab",
+  "block.shroomlight_slab.magma_block_slab":"Magma Block Slab",
+  "block.shroomlight_slab.crying_obsidian_slab":"Crying Obsidian Slab"
 }

@@ -24,6 +24,10 @@ public class Blocks {
             new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.PEARLESCENT_FROGLIGHT).nonOpaque()));
     public static final Block VERDANT_FROGLIGHT_SLAB = registerBlock("verdant_froglight_slab",
             new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.VERDANT_FROGLIGHT).nonOpaque()));
+    public static final Block MAGMA_BLOCK_SLAB = registerBlock("magma_block_slab",
+            new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.MAGMA_BLOCK).nonOpaque()));
+    public static final Block CRYING_OBSIDIAN_SLAB = registerBlock("crying_obsidian_slab",
+            new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.CRYING_OBSIDIAN).nonOpaque()));
 
 //Register Blocks
     private static Block registerBlock(String name, Block block){

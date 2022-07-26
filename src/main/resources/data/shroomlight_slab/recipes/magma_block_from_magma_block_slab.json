@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "_",
+        "_"
+    ],
+    "key": {
+        "_": {
+            "item": "shroomlight_slab:magma_block_slab"
+        }
+    },
+    "result": {
+        "item": "minecraft:magma_block",
+        "count": 1
+    }
+}

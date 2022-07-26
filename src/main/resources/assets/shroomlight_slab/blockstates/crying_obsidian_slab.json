@@ -1,0 +1,16 @@
+{
+  "variants":
+  {
+    "type=bottom":
+    {
+      "model":"shroomlight_slab:block/crying_obsidian_slab"
+    },
+    "type=double":
+    {
+      "model":"minecraft:block/crying_obsidian"
+    },
+    "type=top":{
+      "model":"shroomlight_slab:block/crying_obsidian_slab_top"
+    }
+  }
+}
