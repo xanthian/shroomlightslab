@@ -41,6 +41,5 @@ public class Blocks {
     }
 //Console Print
     public static void registerModBlocks(){
-        System.out.println("Registering Blocks for "+ ShroomlightSlabs.MOD_ID);
     }
 }

@@ -1,8 +1,0 @@
-{
-  "type":"minecraft:stonecutting",
-  "ingredient":
-  {
-    "item":"minecraft:pearlescent_froglight"
-  },
-  "result":"shroomlight_slab:pearlescent_froglight_slab","count":2
-}

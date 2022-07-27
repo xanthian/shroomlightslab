@@ -1,8 +1,0 @@
-{
-  "type":"minecraft:stonecutting",
-  "ingredient":
-  {
-    "item":"minecraft:verdant_froglight"
-  },
-  "result":"shroomlight_slab:verdant_froglight_slab","count":2
-}

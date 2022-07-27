@@ -6,6 +6,7 @@
   "description": "A Shroomlight Slab.. duh! (and Glowstone now)",
   "authors": ["Xanthian"],
   "entrypoints": {"main": ["net.xanthian.shroomlight_slab.ShroomlightSlabs"]},
+  "mixins": ["shroomlightslab.mixins.json"],
   "icon": "assets/shroomlight_slab/icon.png",
   "license": "CC0-1.0",
   "depends": {
