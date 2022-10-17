@@ -28,6 +28,14 @@ public class Blocks {
             new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.MAGMA_BLOCK).nonOpaque()));
     public static final Block CRYING_OBSIDIAN_SLAB = registerBlock("crying_obsidian_slab",
             new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.CRYING_OBSIDIAN).nonOpaque()));
+    public static final Block DIAMOND_BLOCK_SLAB = registerBlock("diamond_block_slab",
+            new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.DIAMOND_BLOCK).nonOpaque()));
+    public static final Block GOLD_BLOCK_SLAB = registerBlock("gold_block_slab",
+            new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.GOLD_BLOCK).nonOpaque()));
+    public static final Block AMETHYST_BLOCK_SLAB = registerBlock("amethyst_block_slab",
+            new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.AMETHYST_BLOCK).nonOpaque()));
+    public static final Block SCULK_SLAB = registerBlock("sculk_slab",
+            new SlabBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.SCULK).nonOpaque()));
 
 //Register Blocks
     private static Block registerBlock(String name, Block block){

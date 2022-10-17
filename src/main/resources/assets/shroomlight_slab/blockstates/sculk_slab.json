@@ -1,0 +1,16 @@
+{
+  "variants":
+  {
+    "type=bottom":
+    {
+      "model":"shroomlight_slab:block/sculk_slab"
+    },
+    "type=double":
+    {
+      "model":"minecraft:block/sculk"
+    },
+    "type=top":{
+      "model":"shroomlight_slab:block/sculk_slab_top"
+    }
+  }
+}

@@ -2,6 +2,9 @@
   "replace":false,
   "values": [
     "shroomlight_slab:crying_obsidian_slab",
-    "shroomlight_slab:magma_block_slab"
+    "shroomlight_slab:magma_block_slab",
+    "shroomlight_slab:diamond_block_slab",
+    "shroomlight_slab:gold_block_slab",
+    "shroomlight_slab:amethyst_block_slab"
   ]
 }

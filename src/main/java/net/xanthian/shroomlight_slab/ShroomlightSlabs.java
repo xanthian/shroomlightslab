@@ -24,7 +24,12 @@ public class ShroomlightSlabs implements ModInitializer {
             Pair.of("ochre_froglight", new String[0]),
             Pair.of("verdant_froglight", new String[0]),
             Pair.of("magma_block", new String[0]),
+            Pair.of("gold_block", new String[0]),
+            Pair.of("diamond_block", new String[0]),
+            Pair.of("amethyst_block", new String[0]),
+            Pair.of("sculk", new String[0]),
             Pair.of("crying_obsidian", new String[0]));
+
 
     @Override
     public void onInitialize() {

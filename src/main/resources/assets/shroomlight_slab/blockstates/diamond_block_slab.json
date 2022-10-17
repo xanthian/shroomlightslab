@@ -1,0 +1,16 @@
+{
+  "variants":
+  {
+    "type=bottom":
+    {
+      "model":"shroomlight_slab:block/diamond_block_slab"
+    },
+    "type=double":
+    {
+      "model":"minecraft:block/diamond_block"
+    },
+    "type=top":{
+      "model":"shroomlight_slab:block/diamond_block_slab_top"
+    }
+  }
+}

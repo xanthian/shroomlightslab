@@ -1,6 +1,7 @@
 {
   "replace":false,
   "values": [
-    "shroomlight_slab:shroomlight_slab"
+    "shroomlight_slab:shroomlight_slab",
+    "shroomlight_slab:sculk_slab"
   ]
 }
