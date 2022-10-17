@@ -8,7 +8,7 @@
   "entrypoints": {"main": ["net.xanthian.shroomlight_slab.ShroomlightSlabs"]},
   "mixins": ["shroomlightslab.mixins.json"],
   "icon": "assets/shroomlight_slab/icon.png",
-  "license": "CC0-1.0",
+  "license": "MIT",
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
