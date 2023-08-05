@@ -1,18 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "shroomlight_slab",
+  "id": "missing_slabs",
   "version": "${version}",
   "name": "The Missing Slabs",
   "description": "Missing slab blocks from vanilla.",
   "authors": ["Xanthian"],
-  "entrypoints": {"main": ["net.xanthian.shroomlight_slab.ShroomlightSlabs"]},
-  "mixins": ["shroomlightslab.mixins.json"],
-  "icon": "assets/shroomlight_slab/icon.png",
+  "entrypoints": {
+    "main": [
+      "net.xanthian.missing_slabs.Initialise"
+    ],
+    "fabric-datagen": [
+      "net.xanthian.missing_slabs.DataGenerator"
+    ]
+  },
   "license": "MIT",
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.14.20",
     "fabric": "*",
-    "minecraft": "~1.19",
+    "minecraft": "1.20.x",
     "java": ">=17"
   }
 }

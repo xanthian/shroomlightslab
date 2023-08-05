@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "missing_slabs:diamond_block_slab",
+    "missing_slabs:gold_block_slab"
+  ]
+}

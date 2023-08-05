@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "missing_slabs:block/glowstone_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/glowstone"
+    },
+    "type=top": {
+      "model": "missing_slabs:block/glowstone_slab_top"
+    }
+  }
+}

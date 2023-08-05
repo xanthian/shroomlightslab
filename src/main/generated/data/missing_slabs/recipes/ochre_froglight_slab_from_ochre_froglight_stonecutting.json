@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:ochre_froglight"
+  },
+  "result": "missing_slabs:ochre_froglight_slab"
+}

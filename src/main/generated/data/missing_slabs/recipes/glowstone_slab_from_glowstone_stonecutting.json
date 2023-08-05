@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:glowstone"
+  },
+  "result": "missing_slabs:glowstone_slab"
+}

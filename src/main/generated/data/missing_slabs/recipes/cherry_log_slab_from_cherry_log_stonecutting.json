@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:cherry_log"
+  },
+  "result": "missing_slabs:cherry_log_slab"
+}

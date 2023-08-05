@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "missing_slabs:shroomlight_slab",
+    "missing_slabs:sculk_slab"
+  ]
+}

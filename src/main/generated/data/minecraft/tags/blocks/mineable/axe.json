@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "missing_slabs:acacia_log_slab",
+    "missing_slabs:birch_log_slab",
+    "missing_slabs:cherry_log_slab",
+    "missing_slabs:crimson_stem_slab",
+    "missing_slabs:dark_oak_log_slab",
+    "missing_slabs:jungle_log_slab",
+    "missing_slabs:mangrove_log_slab",
+    "missing_slabs:oak_log_slab",
+    "missing_slabs:spruce_log_slab",
+    "missing_slabs:warped_stem_slab"
+  ]
+}
