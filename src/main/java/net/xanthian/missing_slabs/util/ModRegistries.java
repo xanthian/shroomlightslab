@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 
 import net.xanthian.missing_slabs.block.MissingSlabs;
 
-
 public class ModRegistries {
 
     public static void registerFuels() {

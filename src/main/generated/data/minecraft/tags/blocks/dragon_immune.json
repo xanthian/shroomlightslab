@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "missing_slabs:crying_obsidian_slab"
+    "missing_slabs:crying_obsidian_slab",
+    "missing_slabs:end_stone_slab"
   ]
 }

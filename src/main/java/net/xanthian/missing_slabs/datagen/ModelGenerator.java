@@ -2,9 +2,11 @@ package net.xanthian.missing_slabs.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+
 import net.xanthian.missing_slabs.block.MissingSlabs;
 import net.xanthian.missing_slabs.util.ModTextureMap;
 
@@ -15,24 +17,34 @@ public class ModelGenerator extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        generateSlabs(MissingSlabs.AMETHYST_BLOCK_SLAB, Blocks.AMETHYST_BLOCK, ModTextureMap.slabsides(Blocks.AMETHYST_BLOCK), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN, ModTextureMap.slabsides(Blocks.CRYING_OBSIDIAN), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.DIAMOND_BLOCK_SLAB, Blocks.DIAMOND_BLOCK, ModTextureMap.slabsides(Blocks.DIAMOND_BLOCK), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.GLOWSTONE_SLAB, Blocks.GLOWSTONE, ModTextureMap.slabsides(Blocks.GLOWSTONE), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.GOLD_BLOCK_SLAB, Blocks.GOLD_BLOCK, ModTextureMap.slabsides(Blocks.GOLD_BLOCK), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.NETHERITE_BLOCK_SLAB, Blocks.NETHERITE_BLOCK, ModTextureMap.slabsides(Blocks.NETHERITE_BLOCK), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.SCULK_SLAB, Blocks.SCULK, ModTextureMap.slabsides(Blocks.SCULK), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.SEA_LANTERN_SLAB, Blocks.SEA_LANTERN, ModTextureMap.slabsides(Blocks.SEA_LANTERN), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.SHROOMLIGHT_SLAB, Blocks.SHROOMLIGHT, ModTextureMap.slabsides(Blocks.SHROOMLIGHT), blockStateModelGenerator);
-
+        generateSlabs(MissingSlabs.AMETHYST_BLOCK_SLAB, Blocks.AMETHYST_BLOCK, ModTextureMap.threesideSlab(Blocks.AMETHYST_BLOCK), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN, ModTextureMap.threesideSlab(Blocks.CRYING_OBSIDIAN), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.GLOWSTONE_SLAB, Blocks.GLOWSTONE, ModTextureMap.threesideSlab(Blocks.GLOWSTONE), blockStateModelGenerator);
         generateSlabs(MissingSlabs.MAGMA_BLOCK_SLAB, Blocks.MAGMA_BLOCK, TextureMap.all(ModelIds.getMinecraftNamespacedBlock("magma")), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.SCULK_SLAB, Blocks.SCULK, ModTextureMap.threesideSlab(Blocks.SCULK), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.SEA_LANTERN_SLAB, Blocks.SEA_LANTERN, ModTextureMap.threesideSlab(Blocks.SEA_LANTERN), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.SHROOMLIGHT_SLAB, Blocks.SHROOMLIGHT, ModTextureMap.threesideSlab(Blocks.SHROOMLIGHT), blockStateModelGenerator);
 
-        // Froglights
-        generateSlabs(MissingSlabs.OCHRE_FROGLIGHT_SLAB, Blocks.OCHRE_FROGLIGHT, ModTextureMap.froglightslabsides(Blocks.OCHRE_FROGLIGHT), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.PEARLESCENT_FROGLIGHT_SLAB, Blocks.PEARLESCENT_FROGLIGHT, ModTextureMap.froglightslabsides(Blocks.PEARLESCENT_FROGLIGHT), blockStateModelGenerator);
-        generateSlabs(MissingSlabs.VERDANT_FROGLIGHT_SLAB, Blocks.VERDANT_FROGLIGHT, ModTextureMap.froglightslabsides(Blocks.VERDANT_FROGLIGHT), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.BASALT_SLAB, Blocks.BASALT, ModTextureMap.sidetopSlab(Blocks.BASALT), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.CALCITE_SLAB, Blocks.CALCITE, ModTextureMap.threesideSlab(Blocks.CALCITE), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.END_STONE_SLAB, Blocks.END_STONE, ModTextureMap.threesideSlab(Blocks.END_STONE), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.NETHERRACK_SLAB, Blocks.NETHERRACK, ModTextureMap.threesideSlab(Blocks.NETHERRACK), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.POLISHED_BASALT_SLAB, Blocks.POLISHED_BASALT, ModTextureMap.sidetopSlab(Blocks.POLISHED_BASALT), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.SMOOTH_BASALT_SLAB, Blocks.SMOOTH_BASALT, ModTextureMap.threesideSlab(Blocks.SMOOTH_BASALT), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.TUFF_SLAB, Blocks.TUFF, ModTextureMap.threesideSlab(Blocks.TUFF), blockStateModelGenerator);
 
-        // Logs
+        generateSlabs(MissingSlabs.DIAMOND_BLOCK_SLAB, Blocks.DIAMOND_BLOCK, ModTextureMap.threesideSlab(Blocks.DIAMOND_BLOCK), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.EMERALD_BLOCK_SLAB, Blocks.EMERALD_BLOCK, ModTextureMap.threesideSlab(Blocks.EMERALD_BLOCK), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.GOLD_BLOCK_SLAB, Blocks.GOLD_BLOCK, ModTextureMap.threesideSlab(Blocks.GOLD_BLOCK), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.IRON_BLOCK_SLAB, Blocks.IRON_BLOCK, ModTextureMap.threesideSlab(Blocks.IRON_BLOCK), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.LAPIS_BLOCK_SLAB, Blocks.LAPIS_BLOCK, ModTextureMap.threesideSlab(Blocks.LAPIS_BLOCK), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.NETHERITE_BLOCK_SLAB, Blocks.NETHERITE_BLOCK, ModTextureMap.threesideSlab(Blocks.NETHERITE_BLOCK), blockStateModelGenerator);
+
+
+        generateSlabs(MissingSlabs.OCHRE_FROGLIGHT_SLAB, Blocks.OCHRE_FROGLIGHT, ModTextureMap.sidetopSlab(Blocks.OCHRE_FROGLIGHT), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.PEARLESCENT_FROGLIGHT_SLAB, Blocks.PEARLESCENT_FROGLIGHT, ModTextureMap.sidetopSlab(Blocks.PEARLESCENT_FROGLIGHT), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.VERDANT_FROGLIGHT_SLAB, Blocks.VERDANT_FROGLIGHT, ModTextureMap.sidetopSlab(Blocks.VERDANT_FROGLIGHT), blockStateModelGenerator);
+
         generateSlabs(MissingSlabs.ACACIA_LOG_SLAB, Blocks.ACACIA_LOG, ModTextureMap.logSlabs(Blocks.ACACIA_LOG), blockStateModelGenerator);
         generateSlabs(MissingSlabs.BIRCH_LOG_SLAB, Blocks.BIRCH_LOG, ModTextureMap.logSlabs(Blocks.BIRCH_LOG), blockStateModelGenerator);
         generateSlabs(MissingSlabs.CHERRY_LOG_SLAB, Blocks.CHERRY_LOG, ModTextureMap.logSlabs(Blocks.CHERRY_LOG), blockStateModelGenerator);

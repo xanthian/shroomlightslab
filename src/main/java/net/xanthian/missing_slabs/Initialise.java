@@ -32,14 +32,26 @@ public class Initialise implements ModInitializer {
 
                     entries.add(MissingSlabs.AMETHYST_BLOCK_SLAB);
                     entries.add(MissingSlabs.CRYING_OBSIDIAN_SLAB);
-                    entries.add(MissingSlabs.DIAMOND_BLOCK_SLAB);
                     entries.add(MissingSlabs.GLOWSTONE_SLAB);
-                    entries.add(MissingSlabs.GOLD_BLOCK_SLAB);
                     entries.add(MissingSlabs.MAGMA_BLOCK_SLAB);
-                    entries.add(MissingSlabs.NETHERITE_BLOCK_SLAB);
                     entries.add(MissingSlabs.SCULK_SLAB);
                     entries.add(MissingSlabs.SEA_LANTERN_SLAB);
                     entries.add(MissingSlabs.SHROOMLIGHT_SLAB);
+
+                    entries.add(MissingSlabs.BASALT_SLAB);
+                    entries.add(MissingSlabs.CALCITE_SLAB);
+                    entries.add(MissingSlabs.END_STONE_SLAB);
+                    entries.add(MissingSlabs.NETHERRACK_SLAB);
+                    entries.add(MissingSlabs.POLISHED_BASALT_SLAB);
+                    entries.add(MissingSlabs.SMOOTH_BASALT_SLAB);
+                    entries.add(MissingSlabs.TUFF_SLAB);
+
+                    entries.add(MissingSlabs.DIAMOND_BLOCK_SLAB);
+                    entries.add(MissingSlabs.EMERALD_BLOCK_SLAB);
+                    entries.add(MissingSlabs.GOLD_BLOCK_SLAB);
+                    entries.add(MissingSlabs.IRON_BLOCK_SLAB);
+                    entries.add(MissingSlabs.LAPIS_BLOCK_SLAB);
+                    entries.add(MissingSlabs.NETHERITE_BLOCK_SLAB);
 
                     entries.add(MissingSlabs.OCHRE_FROGLIGHT_SLAB);
                     entries.add(MissingSlabs.PEARLESCENT_FROGLIGHT_SLAB);
@@ -60,6 +72,5 @@ public class Initialise implements ModInitializer {
 
         MissingSlabs.registerMissingSlabs();
         ModRegistries.registerFuels();
-
     }
 }
