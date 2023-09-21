@@ -1,5 +1,6 @@
 package net.xanthian.missing_slabs.block;
 
+import com.google.common.collect.Maps;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 
@@ -10,24 +11,43 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import net.xanthian.missing_slabs.Initialise;
+import net.xanthian.missing_slabs.block.blocktypes.*;
+
+import java.util.Map;
 
 public class MissingSlabs {
 
+    public static Map<Identifier, Block> MOD_SLABS = Maps.newHashMap();
+
     // Decoration
-    public static final SlabBlock AMETHYST_BLOCK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.AMETHYST_BLOCK).nonOpaque());
-    public static final SlabBlock CRYING_OBSIDIAN_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.CRYING_OBSIDIAN).nonOpaque());
+    public static final SlabBlock CLAY_SLAB =
+            new SlabBlock(FabricBlockSettings.copy(Blocks.CLAY).nonOpaque());
+    public static final SlabBlock DRIPSTONE_BLOCK_SLAB =
+            new SlabBlock(FabricBlockSettings.copy(Blocks.DRIPSTONE_BLOCK).nonOpaque());
     public static final SlabBlock GLOWSTONE_SLAB =
             new SlabBlock(FabricBlockSettings.copy(Blocks.GLOWSTONE).nonOpaque());
-    public static final SlabBlock MAGMA_BLOCK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.MAGMA_BLOCK).nonOpaque());
+    public static final SlabBlock OBSIDIAN_SLAB =
+            new SlabBlock(FabricBlockSettings.copy(Blocks.OBSIDIAN).nonOpaque());
+    public static final SlabBlock PACKED_MUD_SLAB =
+            new SlabBlock(FabricBlockSettings.copy(Blocks.PACKED_MUD).nonOpaque());
     public static final SlabBlock SCULK_SLAB =
             new SlabBlock(FabricBlockSettings.copy(Blocks.SCULK).nonOpaque());
     public static final SlabBlock SEA_LANTERN_SLAB =
             new SlabBlock(FabricBlockSettings.copy(Blocks.SEA_LANTERN).nonOpaque());
     public static final SlabBlock SHROOMLIGHT_SLAB =
             new SlabBlock(FabricBlockSettings.copy(Blocks.SHROOMLIGHT).nonOpaque());
+
+    // Functional
+    public static final AmethystBlockSlab AMETHYST_BLOCK_SLAB =
+            new AmethystBlockSlab();
+    public static final CryingObsidianBlockSlab CRYING_OBSIDIAN_SLAB =
+            new CryingObsidianBlockSlab();
+    public static final MagmaBlockSlab MAGMA_BLOCK_SLAB =
+            new MagmaBlockSlab();
+    public static final MudSlab MUD_SLAB =
+            new MudSlab();
+    public static final SoulSandSlab SOUL_SAND_SLAB =
+            new SoulSandSlab();
 
     // Stones
     public static final SlabBlock BASALT_SLAB =
@@ -91,12 +111,18 @@ public class MissingSlabs {
 
     public static void registerMissingSlabs(){
         registerSlabs("amethyst_block_slab", AMETHYST_BLOCK_SLAB);
+        registerSlabs("clay_slab", CLAY_SLAB);
         registerSlabs("crying_obsidian_slab", CRYING_OBSIDIAN_SLAB);
+        registerSlabs("dripstone_block_slab", DRIPSTONE_BLOCK_SLAB);
         registerSlabs("glowstone_slab", GLOWSTONE_SLAB);
         registerSlabs("magma_block_slab", MAGMA_BLOCK_SLAB);
+        registerSlabs("mud_slab", MUD_SLAB);
+        registerSlabs("obsidian_slab", OBSIDIAN_SLAB);
+        registerSlabs("packed_mud_slab", PACKED_MUD_SLAB);
         registerSlabs("sculk_slab", SCULK_SLAB);
         registerSlabs("sea_lantern_slab", SEA_LANTERN_SLAB);
         registerSlabs("shroomlight_slab", SHROOMLIGHT_SLAB);
+        registerSlabs("soul_sand_slab", SOUL_SAND_SLAB);
 
         registerSlabs("basalt_slab", BASALT_SLAB);
         registerSlabs("calcite_slab", CALCITE_SLAB);
@@ -129,9 +155,10 @@ public class MissingSlabs {
         registerSlabs("warped_stem_slab", WARPED_STEM_SLAB);
 
     }
-    private static void registerSlabs(String Id, SlabBlock block){
+    private static void registerSlabs(String Id, Block block){
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
         Registry.register(Registries.BLOCK, identifier, block);
+        MOD_SLABS.put(identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
     }
 }

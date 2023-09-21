@@ -14,6 +14,8 @@
     "missing_slabs:magma_block_slab",
     "missing_slabs:netherite_block_slab",
     "missing_slabs:netherrack_slab",
+    "missing_slabs:obsidian_slab",
+    "missing_slabs:packed_mud_slab",
     "missing_slabs:polished_basalt_slab",
     "missing_slabs:smooth_basalt_slab",
     "missing_slabs:tuff_slab"

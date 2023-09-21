@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:clay"
+  },
+  "result": "missing_slabs:clay_slab"
+}

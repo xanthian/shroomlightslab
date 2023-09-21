@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "missing_slabs:crying_obsidian_slab",
-    "missing_slabs:netherite_block_slab"
+    "missing_slabs:netherite_block_slab",
+    "missing_slabs:obsidian_slab"
   ]
 }

@@ -18,12 +18,18 @@ public class ModelGenerator extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         generateSlabs(MissingSlabs.AMETHYST_BLOCK_SLAB, Blocks.AMETHYST_BLOCK, ModTextureMap.threesideSlab(Blocks.AMETHYST_BLOCK), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.CLAY_SLAB, Blocks.CLAY, ModTextureMap.threesideSlab(Blocks.CLAY), blockStateModelGenerator);
         generateSlabs(MissingSlabs.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN, ModTextureMap.threesideSlab(Blocks.CRYING_OBSIDIAN), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.DRIPSTONE_BLOCK_SLAB, Blocks.DRIPSTONE_BLOCK, ModTextureMap.threesideSlab(Blocks.DRIPSTONE_BLOCK), blockStateModelGenerator);
         generateSlabs(MissingSlabs.GLOWSTONE_SLAB, Blocks.GLOWSTONE, ModTextureMap.threesideSlab(Blocks.GLOWSTONE), blockStateModelGenerator);
         generateSlabs(MissingSlabs.MAGMA_BLOCK_SLAB, Blocks.MAGMA_BLOCK, TextureMap.all(ModelIds.getMinecraftNamespacedBlock("magma")), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.MUD_SLAB, Blocks.MUD, ModTextureMap.threesideSlab(Blocks.MUD), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.OBSIDIAN_SLAB, Blocks.OBSIDIAN, ModTextureMap.threesideSlab(Blocks.OBSIDIAN), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.PACKED_MUD_SLAB, Blocks.PACKED_MUD, ModTextureMap.threesideSlab(Blocks.PACKED_MUD), blockStateModelGenerator);
         generateSlabs(MissingSlabs.SCULK_SLAB, Blocks.SCULK, ModTextureMap.threesideSlab(Blocks.SCULK), blockStateModelGenerator);
         generateSlabs(MissingSlabs.SEA_LANTERN_SLAB, Blocks.SEA_LANTERN, ModTextureMap.threesideSlab(Blocks.SEA_LANTERN), blockStateModelGenerator);
         generateSlabs(MissingSlabs.SHROOMLIGHT_SLAB, Blocks.SHROOMLIGHT, ModTextureMap.threesideSlab(Blocks.SHROOMLIGHT), blockStateModelGenerator);
+        generateSlabs(MissingSlabs.SOUL_SAND_SLAB, Blocks.SOUL_SAND, ModTextureMap.threesideSlab(Blocks.SOUL_SAND), blockStateModelGenerator);
 
         generateSlabs(MissingSlabs.BASALT_SLAB, Blocks.BASALT, ModTextureMap.sidetopSlab(Blocks.BASALT), blockStateModelGenerator);
         generateSlabs(MissingSlabs.CALCITE_SLAB, Blocks.CALCITE, ModTextureMap.threesideSlab(Blocks.CALCITE), blockStateModelGenerator);
@@ -39,7 +45,6 @@ public class ModelGenerator extends FabricModelProvider {
         generateSlabs(MissingSlabs.IRON_BLOCK_SLAB, Blocks.IRON_BLOCK, ModTextureMap.threesideSlab(Blocks.IRON_BLOCK), blockStateModelGenerator);
         generateSlabs(MissingSlabs.LAPIS_BLOCK_SLAB, Blocks.LAPIS_BLOCK, ModTextureMap.threesideSlab(Blocks.LAPIS_BLOCK), blockStateModelGenerator);
         generateSlabs(MissingSlabs.NETHERITE_BLOCK_SLAB, Blocks.NETHERITE_BLOCK, ModTextureMap.threesideSlab(Blocks.NETHERITE_BLOCK), blockStateModelGenerator);
-
 
         generateSlabs(MissingSlabs.OCHRE_FROGLIGHT_SLAB, Blocks.OCHRE_FROGLIGHT, ModTextureMap.sidetopSlab(Blocks.OCHRE_FROGLIGHT), blockStateModelGenerator);
         generateSlabs(MissingSlabs.PEARLESCENT_FROGLIGHT_SLAB, Blocks.PEARLESCENT_FROGLIGHT, ModTextureMap.sidetopSlab(Blocks.PEARLESCENT_FROGLIGHT), blockStateModelGenerator);

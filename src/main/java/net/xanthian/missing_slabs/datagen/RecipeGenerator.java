@@ -29,9 +29,17 @@ public class RecipeGenerator extends FabricRecipeProvider {
         FabricRecipeProvider.offerStonecuttingRecipe(exporter,RecipeCategory.BUILDING_BLOCKS, MissingSlabs.AMETHYST_BLOCK_SLAB,Blocks.AMETHYST_BLOCK,2);
         offerUncraftingRecipe(exporter,Blocks.AMETHYST_BLOCK, MissingSlabs.AMETHYST_BLOCK_SLAB);
 
+        FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.CLAY_SLAB, Blocks.CLAY);
+        FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.CLAY_SLAB, Blocks.CLAY,2);
+        offerUncraftingRecipe(exporter,Blocks.CLAY, MissingSlabs.CLAY_SLAB);
+
         FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN);
         FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN,2);
         offerUncraftingRecipe(exporter,Blocks.CRYING_OBSIDIAN, MissingSlabs.CRYING_OBSIDIAN_SLAB);
+
+        FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.DRIPSTONE_BLOCK_SLAB, Blocks.DRIPSTONE_BLOCK);
+        FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.DRIPSTONE_BLOCK_SLAB, Blocks.DRIPSTONE_BLOCK,2);
+        offerUncraftingRecipe(exporter,Blocks.DRIPSTONE_BLOCK, MissingSlabs.DRIPSTONE_BLOCK_SLAB);
 
         FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.GLOWSTONE_SLAB, Blocks.GLOWSTONE);
         FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.GLOWSTONE_SLAB, Blocks.GLOWSTONE,2);
@@ -44,6 +52,18 @@ public class RecipeGenerator extends FabricRecipeProvider {
         FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.MAGMA_BLOCK_SLAB, Blocks.MAGMA_BLOCK, 2);
         offerUncraftingRecipe(exporter,Blocks.MAGMA_BLOCK, MissingSlabs.MAGMA_BLOCK_SLAB);
 
+        FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.MUD_SLAB, Blocks.MUD);
+        FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.MUD_SLAB, Blocks.MUD, 2);
+        offerUncraftingRecipe(exporter,Blocks.MUD, MissingSlabs.MUD_SLAB);
+
+        FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.OBSIDIAN_SLAB, Blocks.OBSIDIAN);
+        FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.OBSIDIAN_SLAB, Blocks.OBSIDIAN, 2);
+        offerUncraftingRecipe(exporter,Blocks.OBSIDIAN, MissingSlabs.OBSIDIAN_SLAB);
+
+        FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.PACKED_MUD_SLAB, Blocks.PACKED_MUD);
+        FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.PACKED_MUD_SLAB, Blocks.PACKED_MUD, 2);
+        offerUncraftingRecipe(exporter,Blocks.PACKED_MUD, MissingSlabs.PACKED_MUD_SLAB);
+
         FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.SCULK_SLAB, Blocks.SCULK);
         FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.SCULK_SLAB, Blocks.SCULK, 2);
         offerUncraftingRecipe(exporter,Blocks.SCULK, MissingSlabs.SCULK_SLAB);
@@ -55,6 +75,10 @@ public class RecipeGenerator extends FabricRecipeProvider {
         FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.SHROOMLIGHT_SLAB, Blocks.SHROOMLIGHT);
         FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.SHROOMLIGHT_SLAB, Blocks.SHROOMLIGHT, 2);
         offerUncraftingRecipe(exporter,Blocks.SHROOMLIGHT, MissingSlabs.SHROOMLIGHT_SLAB);
+
+        FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.SOUL_SAND_SLAB, Blocks.SOUL_SAND);
+        FabricRecipeProvider.offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.SOUL_SAND_SLAB, Blocks.SOUL_SAND, 2);
+        offerUncraftingRecipe(exporter,Blocks.SOUL_SAND, MissingSlabs.SOUL_SAND_SLAB);
 
         // Stones
         FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.BASALT_SLAB, Blocks.BASALT);
