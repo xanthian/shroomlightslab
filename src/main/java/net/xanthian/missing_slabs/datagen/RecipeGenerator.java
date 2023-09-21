@@ -4,17 +4,12 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.data.server.recipe.RecipeProvider;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.VanillaRecipeProvider;
+import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 
 import net.xanthian.missing_slabs.block.MissingSlabs;
-
-import java.util.function.Consumer;
 
 public class RecipeGenerator extends FabricRecipeProvider {
     public RecipeGenerator(FabricDataOutput output) {
@@ -22,7 +17,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
 
         // Decorations
         FabricRecipeProvider.offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, MissingSlabs.AMETHYST_BLOCK_SLAB, Blocks.AMETHYST_BLOCK);
@@ -190,7 +185,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
         offerUncraftingRecipe(exporter,Blocks.WARPED_STEM, MissingSlabs.WARPED_STEM_SLAB);
 
     }
-    public static void offerUncraftingRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible output, ItemConvertible input) {
+    public static void offerUncraftingRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, output, 1)
                 .input('#', input)
                 .pattern("#").pattern("#")
