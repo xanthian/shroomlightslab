@@ -1,164 +1,127 @@
 package net.xanthian.missing_slabs.block;
 
-import com.google.common.collect.Maps;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-
-import net.minecraft.block.*;
-import net.minecraft.item.BlockItem;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import net.xanthian.missing_slabs.Initialise;
 import net.xanthian.missing_slabs.block.blocktypes.*;
+import net.xanthian.missing_slabs.item.ModItems;
 
-import java.util.Map;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.function.Supplier;
 
 public class MissingSlabs {
 
-    public static Map<Identifier, Block> MOD_SLABS = Maps.newHashMap();
+    public static final DeferredRegister<Block> BLOCKS =
+            DeferredRegister.create(ForgeRegistries.BLOCKS, Initialise.MOD_ID);
 
-    // Decoration
-    public static final SlabBlock CLAY_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.CLAY).nonOpaque());
-    public static final SlabBlock DRIPSTONE_BLOCK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.DRIPSTONE_BLOCK).nonOpaque());
-    public static final SlabBlock GLOWSTONE_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.GLOWSTONE).nonOpaque());
-    public static final SlabBlock OBSIDIAN_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.OBSIDIAN).nonOpaque());
-    public static final SlabBlock PACKED_MUD_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.PACKED_MUD).nonOpaque());
-    public static final SlabBlock SCULK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.SCULK).nonOpaque());
-    public static final SlabBlock SEA_LANTERN_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.SEA_LANTERN).nonOpaque());
-    public static final SlabBlock SHROOMLIGHT_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.SHROOMLIGHT).nonOpaque());
+    // Functional Blocks
+    public static final RegistryObject<Block> SEA_LANTERN_SLAB = register("sea_lantern_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN)), 0);
+    public static final RegistryObject<Block> GLOWSTONE_SLAB = register("glowstone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE)), 0);
+    public static final RegistryObject<Block> SHROOMLIGHT_SLAB = register("shroomlight_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SHROOMLIGHT)), 0);
+    public static final RegistryObject<Block> OCHRE_FROGLIGHT_SLAB = register("ochre_froglight_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OCHRE_FROGLIGHT)), 0);
+    public static final RegistryObject<Block> PEARLESCENT_FROGLIGHT_SLAB = register("pearlescent_froglight_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PEARLESCENT_FROGLIGHT)), 0);
+    public static final RegistryObject<Block> VERDANT_FROGLIGHT_SLAB = register("verdant_froglight_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.VERDANT_FROGLIGHT)), 0);
+    public static final RegistryObject<Block> CRYING_OBSIDIAN_SLAB = register("crying_obsidian_slab",
+            () -> new CryingObsidianBlockSlab(BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN)), 0);
+    public static final RegistryObject<Block> MAGMA_BLOCK_SLAB = register("magma_block_slab",
+            () -> new MagmaBlockSlab(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)), 0);
 
-    // Functional
-    public static final AmethystBlockSlab AMETHYST_BLOCK_SLAB =
-            new AmethystBlockSlab();
-    public static final CryingObsidianBlockSlab CRYING_OBSIDIAN_SLAB =
-            new CryingObsidianBlockSlab();
-    public static final MagmaBlockSlab MAGMA_BLOCK_SLAB =
-            new MagmaBlockSlab();
-    public static final MudSlab MUD_SLAB =
-            new MudSlab();
-    public static final SoulSandSlab SOUL_SAND_SLAB =
-            new SoulSandSlab();
+    // Natural Blocks
+    public static final RegistryObject<Block> MUD_SLAB = register("mud_slab",
+            () -> new MudSlab(BlockBehaviour.Properties.copy(Blocks.MUD)), 0);
+    public static final RegistryObject<Block> CLAY_SLAB = register("clay_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CLAY)), 0);
+    public static final RegistryObject<Block> CALCITE_SLAB = register("calcite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)), 0);
+    public static final RegistryObject<Block> TUFF_SLAB = register("tuff_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)), 0);
+    public static final RegistryObject<Block> DRIPSTONE_BLOCK_SLAB = register("dripstone_block_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)), 0);
+    public static final RegistryObject<Block> OBSIDIAN_SLAB = register("obsidian_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)), 0);
+    public static final RegistryObject<Block> SOUL_SAND_SLAB = register("soul_sand_slab",
+            () -> new SoulSandSlab(BlockBehaviour.Properties.copy(Blocks.SOUL_SAND)), 0);
+    public static final RegistryObject<Block> SCULK_SLAB = register("sculk_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SCULK)), 0);
 
-    // Stones
-    public static final SlabBlock BASALT_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.BASALT).nonOpaque());
-    public static final SlabBlock CALCITE_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.CALCITE).nonOpaque());
-    public static final SlabBlock END_STONE_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.END_STONE).nonOpaque());
-    public static final SlabBlock NETHERRACK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.NETHERRACK).nonOpaque());
-    public static final SlabBlock POLISHED_BASALT_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.POLISHED_BASALT).nonOpaque());
-    public static final SlabBlock SMOOTH_BASALT_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.SMOOTH_BASALT).nonOpaque());
-    public static final SlabBlock TUFF_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.TUFF).nonOpaque());
+    // Building Blocks
+    public static final RegistryObject<Block> ACACIA_LOG_SLAB = register("acacia_log_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)), 150);
+    public static final RegistryObject<Block> BIRCH_LOG_SLAB = register("birch_log_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)), 150);
+    public static final RegistryObject<Block> CHERRY_LOG_SLAB = register("cherry_log_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)), 150);
+    public static final RegistryObject<Block> CRIMSON_STEM_SLAB = register("crimson_stem_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)), 0);
+    public static final RegistryObject<Block> DARK_OAK_LOG_SLAB = register("dark_oak_log_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS)), 150);
+    public static final RegistryObject<Block> JUNGLE_LOG_SLAB = register("jungle_log_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_PLANKS)), 150);
+    public static final RegistryObject<Block> MANGROVE_LOG_SLAB = register("mangrove_log_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PLANKS)), 150);
+    public static final RegistryObject<Block> OAK_LOG_SLAB = register("oak_log_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), 150);
+    public static final RegistryObject<Block> SPRUCE_LOG_SLAB = register("spruce_log_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_PLANKS)), 150);
+    public static final RegistryObject<Block> WARPED_STEM_SLAB = register("warped_stem_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)), 0);
 
-    // Precious Metals
-    public static final SlabBlock DIAMOND_BLOCK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.DIAMOND_BLOCK).nonOpaque());
-    public static final SlabBlock EMERALD_BLOCK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.EMERALD_BLOCK).nonOpaque());
-    public static final SlabBlock GOLD_BLOCK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.GOLD_BLOCK).nonOpaque());
-    public static final SlabBlock IRON_BLOCK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.IRON_BLOCK).nonOpaque());
-    public static final SlabBlock NETHERITE_BLOCK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.NETHERITE_BLOCK).nonOpaque());
-    public static final SlabBlock LAPIS_BLOCK_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.LAPIS_BLOCK).nonOpaque());
+    public static final RegistryObject<Block> PACKED_MUD_SLAB = register("packed_mud_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PACKED_MUD)), 0);
+    public static final RegistryObject<Block> BASALT_SLAB = register("basalt_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BASALT)), 0);
+    public static final RegistryObject<Block> POLISHED_BASALT_SLAB = register("polished_basalt_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.POLISHED_BASALT)), 0);
+    public static final RegistryObject<Block> SMOOTH_BASALT_SLAB = register("smooth_basalt_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_BASALT)), 0);
+    public static final RegistryObject<Block> NETHERRACK_SLAB = register("netherrack_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)), 0);
+    public static final RegistryObject<Block> END_STONE_SLAB = register("end_stone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)), 0);
+    public static final RegistryObject<Block> IRON_BLOCK_SLAB = register("iron_block_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)), 0);
+    public static final RegistryObject<Block> GOLD_BLOCK_SLAB = register("gold_block_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)), 0);
+    public static final RegistryObject<Block> EMERALD_BLOCK_SLAB = register("emerald_block_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)), 0);
+    public static final RegistryObject<Block> LAPIS_BLOCK_SLAB = register("lapis_block_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.LAPIS_BLOCK)), 0);
+    public static final RegistryObject<Block> DIAMOND_BLOCK_SLAB = register("diamond_block_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)), 0);
+    public static final RegistryObject<Block> NETHERITE_BLOCK_SLAB = register("netherite_block_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)), 0);
+    public static final RegistryObject<Block> AMETHYST_BLOCK_SLAB = register("amethyst_block_slab",
+            () -> new AmethystBlockSlab(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)), 0);
 
-    // Froglights
-    public static final SlabBlock OCHRE_FROGLIGHT_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.OCHRE_FROGLIGHT).nonOpaque());
-    public static final SlabBlock PEARLESCENT_FROGLIGHT_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.PEARLESCENT_FROGLIGHT).nonOpaque());
-    public static final SlabBlock VERDANT_FROGLIGHT_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.VERDANT_FROGLIGHT).nonOpaque());
-
-    // Logs
-    public static final SlabBlock ACACIA_LOG_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.ACACIA_PLANKS).nonOpaque());
-    public static final SlabBlock BIRCH_LOG_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.BIRCH_PLANKS).nonOpaque());
-    public static final SlabBlock CHERRY_LOG_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.CHERRY_PLANKS).nonOpaque());
-    public static final SlabBlock CRIMSON_STEM_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.CRIMSON_STEM).nonOpaque());
-    public static final SlabBlock DARK_OAK_LOG_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.DARK_OAK_PLANKS).nonOpaque());
-    public static final SlabBlock JUNGLE_LOG_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.JUNGLE_PLANKS).nonOpaque());
-    public static final SlabBlock MANGROVE_LOG_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.MANGROVE_PLANKS).nonOpaque());
-    public static final SlabBlock OAK_LOG_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.OAK_PLANKS).nonOpaque());
-    public static final SlabBlock SPRUCE_LOG_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.SPRUCE_PLANKS).nonOpaque());
-    public static final SlabBlock WARPED_STEM_SLAB =
-            new SlabBlock(FabricBlockSettings.copy(Blocks.WARPED_STEM).nonOpaque());
-
-    public static void registerMissingSlabs(){
-        registerSlabs("amethyst_block_slab", AMETHYST_BLOCK_SLAB);
-        registerSlabs("clay_slab", CLAY_SLAB);
-        registerSlabs("crying_obsidian_slab", CRYING_OBSIDIAN_SLAB);
-        registerSlabs("dripstone_block_slab", DRIPSTONE_BLOCK_SLAB);
-        registerSlabs("glowstone_slab", GLOWSTONE_SLAB);
-        registerSlabs("magma_block_slab", MAGMA_BLOCK_SLAB);
-        registerSlabs("mud_slab", MUD_SLAB);
-        registerSlabs("obsidian_slab", OBSIDIAN_SLAB);
-        registerSlabs("packed_mud_slab", PACKED_MUD_SLAB);
-        registerSlabs("sculk_slab", SCULK_SLAB);
-        registerSlabs("sea_lantern_slab", SEA_LANTERN_SLAB);
-        registerSlabs("shroomlight_slab", SHROOMLIGHT_SLAB);
-        registerSlabs("soul_sand_slab", SOUL_SAND_SLAB);
-
-        registerSlabs("basalt_slab", BASALT_SLAB);
-        registerSlabs("calcite_slab", CALCITE_SLAB);
-        registerSlabs("end_stone_slab", END_STONE_SLAB);
-        registerSlabs("netherrack_slab", NETHERRACK_SLAB);
-        registerSlabs("polished_basalt_slab", POLISHED_BASALT_SLAB);
-        registerSlabs("smooth_basalt_slab", SMOOTH_BASALT_SLAB);
-        registerSlabs("tuff_slab", TUFF_SLAB);
-
-        registerSlabs("diamond_block_slab", DIAMOND_BLOCK_SLAB);
-        registerSlabs("emerald_block_slab", EMERALD_BLOCK_SLAB);
-        registerSlabs("gold_block_slab", GOLD_BLOCK_SLAB);
-        registerSlabs("iron_block_slab", IRON_BLOCK_SLAB);
-        registerSlabs("lapis_block_slab", LAPIS_BLOCK_SLAB);
-        registerSlabs("netherite_block_slab", NETHERITE_BLOCK_SLAB);
-
-        registerSlabs("ochre_froglight_slab", OCHRE_FROGLIGHT_SLAB);
-        registerSlabs("pearlescent_froglight_slab", PEARLESCENT_FROGLIGHT_SLAB);
-        registerSlabs("verdant_froglight_slab", VERDANT_FROGLIGHT_SLAB);
-
-        registerSlabs("acacia_log_slab", ACACIA_LOG_SLAB);
-        registerSlabs("birch_log_slab", BIRCH_LOG_SLAB);
-        registerSlabs("cherry_log_slab", CHERRY_LOG_SLAB);
-        registerSlabs("crimson_stem_slab", CRIMSON_STEM_SLAB);
-        registerSlabs("dark_oak_log_slab", DARK_OAK_LOG_SLAB);
-        registerSlabs("jungle_log_slab", JUNGLE_LOG_SLAB);
-        registerSlabs("mangrove_log_slab", MANGROVE_LOG_SLAB);
-        registerSlabs("oak_log_slab", OAK_LOG_SLAB);
-        registerSlabs("spruce_log_slab", SPRUCE_LOG_SLAB);
-        registerSlabs("warped_stem_slab", WARPED_STEM_SLAB);
-
+    private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, int burnTime) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, burnTime);
+        return toReturn;
     }
-    private static void registerSlabs(String Id, Block block){
-        Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
-        Registry.register(Registries.BLOCK, identifier, block);
-        MOD_SLABS.put(identifier, block);
-        Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
+
+    private static <T extends Block> RegistryObject<BlockItem> registerBlockItem(String name, RegistryObject<T> block, int burnTime) {
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()) {
+            @Override
+            public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+                return burnTime;
+            }
+        });
     }
 }

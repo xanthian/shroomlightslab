@@ -1,29 +1,35 @@
 package net.xanthian.missing_slabs.block.blocktypes;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
-import net.minecraft.block.enums.SlabType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+import org.jetbrains.annotations.NotNull;
 
 public class MudSlab extends SlabBlock {
-    public MudSlab() {
-        super(FabricBlockSettings.copy(Blocks.MUD).nonOpaque());
+    public MudSlab(BlockBehaviour.Properties properties) {
+        super(properties);
     }
 
-    protected static final VoxelShape BOTTOM_COLLISION_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 6.0, 16.0);
-    protected static final VoxelShape TOP_COLLISION_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
-    protected static final VoxelShape DOUBLE_COLLISION_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
+    protected static final VoxelShape BOTTOM_COLLISION_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 6.0, 16.0);
+    protected static final VoxelShape TOP_COLLISION_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
+    protected static final VoxelShape DOUBLE_COLLISION_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        SlabType slabType = state.get(TYPE);
+    @SuppressWarnings("deprecation")
+    public @NotNull VoxelShape getCollisionShape(BlockState blockState, @NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
+        SlabType slabType = blockState.getValue(TYPE);
         switch (slabType) {
-            case DOUBLE: {
+            case DOUBLE -> {
                 return DOUBLE_COLLISION_SHAPE;
             }
-            case TOP: {
+            case TOP -> {
                 return TOP_COLLISION_SHAPE;
             }
         }
@@ -31,7 +37,8 @@ public class MudSlab extends SlabBlock {
     }
 
     @Override
-    public float getAmbientOcclusionLightLevel(BlockState state, BlockView world, BlockPos pos) {
+    @SuppressWarnings("deprecation")
+    public float getShadeBrightness(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos) {
         return 0.2f;
     }
 }

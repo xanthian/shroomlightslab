@@ -1,38 +1,45 @@
 package net.xanthian.missing_slabs.block.blocktypes;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
-import net.minecraft.block.enums.SlabType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+import org.jetbrains.annotations.NotNull;
 
 public class SoulSandSlab extends SlabBlock {
 
-    protected static final VoxelShape BOTTOM_COLLISION_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 6.0, 16.0);
-    protected static final VoxelShape TOP_COLLISION_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
-    protected static final VoxelShape DOUBLE_COLLISION_SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
+    protected static final VoxelShape BOTTOM_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 6.0, 16.0);
+    protected static final VoxelShape TOP_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
+    protected static final VoxelShape DOUBLE_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 14.0, 16.0);
 
-    public SoulSandSlab() {
-        super(FabricBlockSettings.copy(Blocks.SOUL_SAND).nonOpaque());
+    public SoulSandSlab(BlockBehaviour.Properties properties) {
+        super(properties);
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        SlabType slabType = state.get(TYPE);
+    @SuppressWarnings("deprecation")
+    public @NotNull VoxelShape getCollisionShape(BlockState blockState, @NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos, @NotNull CollisionContext collisionContext) {
+        SlabType slabType = blockState.getValue(TYPE);
         switch (slabType) {
             case DOUBLE -> {
-                return DOUBLE_COLLISION_SHAPE;
+                return DOUBLE_SHAPE;
             }
             case TOP -> {
-                return TOP_COLLISION_SHAPE;
+                return TOP_SHAPE;
             }
         }
-        return BOTTOM_COLLISION_SHAPE;
+        return BOTTOM_SHAPE;
     }
 
     @Override
-    public float getAmbientOcclusionLightLevel(BlockState state, BlockView world, BlockPos pos) {
+    @SuppressWarnings("deprecation")
+    public float getShadeBrightness(@NotNull BlockState blockState, @NotNull BlockGetter blockGetter, @NotNull BlockPos blockPos) {
         return 0.2f;
     }
 }
